@@ -15,5 +15,5 @@ app.use(bodyParser.json());
 app.use('/api', api);
 
 app.listen(port, function(){
-    console.log("Marvellous Innfosystems : Server running on localhost:" + port);
+    console.log("Events Back-End : Server running on localhost:" + port);
 });
