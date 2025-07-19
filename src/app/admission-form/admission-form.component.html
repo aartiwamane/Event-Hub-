@@ -1,0 +1,65 @@
+<div class="container mt-5">
+  <div class="card shadow">
+    <div class="card-header bg-primary text-white">
+      <h3 class="mb-0">Admission for {{ eventName }}</h3>
+    </div>
+    <div class="card-body">
+      <form #admissionForm="ngForm" (ngSubmit)="onSubmit(admissionForm)">
+        <!-- Full Name -->
+        <div class="form-group mb-3">
+          <label for="name">Full Name</label>
+          <input type="text" class="form-control" id="name" name="name" ngModel required placeholder="Enter your full name" />
+        </div>
+
+        <!-- Email -->
+        <div class="form-group mb-3">
+          <label for="email">Email</label>
+          <input type="email" class="form-control" id="email" name="email" ngModel required placeholder="Enter your email address" />
+        </div>
+
+        <!-- Phone -->
+        <div class="form-group mb-3">
+          <label for="phone">Phone Number</label>
+          <input type="tel" class="form-control" id="phone" name="phone" ngModel required placeholder="Enter your phone number" />
+        </div>
+
+        <!-- Current Education -->
+        <div class="form-group mb-3">
+          <label for="education">Current Education</label>
+          <input type="text" class="form-control" id="education" name="education" ngModel required placeholder="E.g., BE Computer, 3rd Year" />
+        </div>
+
+        <!-- Address -->
+        <div class="form-group mb-3">
+          <label for="address">Residential Address</label>
+          <textarea class="form-control" id="address" name="address" ngModel required rows="3" placeholder="Enter your full address"></textarea>
+        </div>
+
+        <!-- Aadhar Number -->
+        <div class="form-group mb-3">
+          <label for="aadhar">Aadhar Number</label>
+          <input type="text" class="form-control" id="aadhar" name="aadhar" ngModel required placeholder="12-digit Aadhar number" maxlength="12" />
+        </div>
+
+        <!-- Batch Selection -->
+        <div class="form-group mb-3">
+          <label for="batch">Preferred Batch Timing</label>
+          <select class="form-select" id="batch" name="batch" ngModel required>
+            <option value="">-- Select --</option>
+            <option value="Morning (7AM - 9AM)">Morning (7AM - 9AM)</option>
+            <option value="Afternoon (12PM - 2PM)">Afternoon (12PM - 2PM)</option>
+            <option value="Evening (6PM - 8PM)">Evening (6PM - 8PM)</option>
+          </select>
+        </div>
+
+        <!-- Fees -->
+        <div class="form-group mb-4">
+          <label for="fees">Course Fees (in ₹)</label>
+          <input type="number" class="form-control" id="fees" name="fees" ngModel required placeholder="Enter the course fees" />
+        </div>
+
+        <button type="submit" class="btn btn-primary w-100">Submit Admission</button>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+button.btn-primary:hover {
+  background-color: #1500b3f9; /* darker blue */
+  color: white;
+}
+
+button.btn-success:hover {
+  background-color: #028468fd; /* darker green */
+  color: white;
+}
