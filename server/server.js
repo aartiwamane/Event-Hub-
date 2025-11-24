@@ -9,14 +9,14 @@ const port = 3000;
 
 const app = express();
 app.use(cors())
-app.use(express.static(path.join(__dirname, '../dist/event-hub/browser')));
+app.use(express.static(path.join(__dirname, '../dist/event-hub')));
 
 app.use(bodyParser.json()); 
 
 app.use('/api', api);
 
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../dist/event-hub/browser/index.html'));
+  res.sendFile(path.join(__dirname, '../dist/event-hub/index.html'));
 });
 
 app.listen(port, function(){
