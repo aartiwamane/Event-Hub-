@@ -7,10 +7,13 @@ const Events = require('../models/events');
 const Specialevents = require('../models/specialevents')
 const Admission = require('../models/admission')
 
-mongoose.connect('mongodb+srv://aarti_wamane:Aarti2204@cluster0.ubalotp.mongodb.net/eventhub?retryWrites=true&w=majority&appName=Cluster0')
-    .then(() => console.log('Connected to MongoDB Atlas'))
-  .catch((err) => console.error(' MongoDB connection error:', err));
+// mongoose.connect('mongodb+srv://aarti_wamane:Aarti2204@cluster0.ubalotp.mongodb.net/eventhub?retryWrites=true&w=majority&appName=Cluster0')
+//     .then(() => console.log('Connected to MongoDB Atlas'))
+//   .catch((err) => console.error(' MongoDB connection error:', err));
 
+mongoose.connect(process.env.MONGO_URI)
+  .then(() => console.log('Connected to MongoDB Atlas'))
+  .catch(err => console.error('MongoDB connection error:', err));
 
 function verifyToken(req, res, next) 
 {
