@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "node server/server.js",
-    "build": "ng build --configuration production",
+    "build": "node ./node_modules/@angular/cli/bin/ng build --configuration production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:EventHUB": "node dist/event-hub/server/server.mjs"
