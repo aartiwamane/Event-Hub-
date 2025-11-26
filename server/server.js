@@ -14,10 +14,10 @@ app.use(bodyParser.json());
 
 app.use('/api', api);
 
-app.use(express.static(path.join(__dirname, '../dist/event-hub')));
+app.use(express.static(path.join(__dirname, '../dist/eventshub')));
 
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../dist/event-hub/index.html'));
+  res.sendFile(path.join(__dirname, '../dist/eventshub/index.html'));
 });
 
 app.listen(port, function(){
