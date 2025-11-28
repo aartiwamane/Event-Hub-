@@ -25,7 +25,10 @@ export class LoginComponent implements OnInit
     .subscribe(
       res => {
         localStorage.setItem('token', res.token)
-        this._router.navigate(['/special'])
+        setTimeout(() => {
+  this._router.navigate(['/events']);
+}, 200);
+
       },
       err => console.log(err)
     ) 

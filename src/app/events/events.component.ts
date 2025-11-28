@@ -12,16 +12,20 @@ export class EventsComponent implements OnInit
 
     constructor(private _eventService: EventService,private router: Router) { }
     
-
-    
-  ngOnInit() 
-  {
-    this._eventService.getEvents()
+ ngOnInit(): void {
+  console.log("EventsComponent loaded");
+  this._eventService.getEvents()
       .subscribe(
-        res => this.events = res,
-        err => console.log(err)
-      )
-  }
+        res => {
+          console.log("Events API Response:", res);
+          this.events = res;
+        },
+        err => {
+          console.log("Events API Error:", err);
+        }
+      );
+}
+
   openAdmissionForm(event: any) {
     this.router.navigate(['/admission-form'], { 
       queryParams: { 

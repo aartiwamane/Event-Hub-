@@ -7,8 +7,8 @@ import { HttpClient } from '@angular/common/http';
 export class EventService {
 
   
-  private _eventsUrl = "http://https://event-hub-wdvo.onrender.com/api/events";
-  private _specialEventsUrl = "http://https://event-hub-wdvo.onrender.com/api/special";
+  private _eventsUrl = "https://event-hub-wdvo.onrender.com/api/events";
+  private _specialEventsUrl = "https://event-hub-wdvo.onrender.com/api/special";
 
 
   constructor(private http :HttpClient) { }

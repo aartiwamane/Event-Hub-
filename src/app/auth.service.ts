@@ -9,7 +9,7 @@ import { Inject, PLATFORM_ID } from '@angular/core';
 })
 export class AuthService {
 
-  private _loginUrl = "http://https://event-hub-wdvo.onrender.com/api/login";
+ private _loginUrl = "https://event-hub-wdvo.onrender.com/api/login";
 
   private isBrowser: boolean = typeof window !== 'undefined';
 
