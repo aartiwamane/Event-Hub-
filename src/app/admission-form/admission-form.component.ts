@@ -33,7 +33,7 @@ export class AdmissionFormComponent implements OnInit {
       eventName: this.eventName
     };
 
-    this.http.post('http://localhost:3000/api/admissions', formData)
+    this.http.post('https://event-hub-wdvo.onrender.com/api/admissions', formData)
       .subscribe({
         next: (res) => {
           console.log('Submitted successfully', res);

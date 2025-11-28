@@ -71,6 +71,27 @@
           },
           "defaultConfiguration": "production"
         },
+
+        "server": {
+  "builder": "@angular-devkit/build-angular:server",
+  "options": {
+    "outputPath": "dist/eventshub/server",
+    "main": "src/main.server.ts",
+    "tsConfig": "tsconfig.server.json"
+  },
+  "configurations": {
+    "production": {
+      "sourceMap": false,
+      "optimization": true
+    },
+    "development": {
+      "sourceMap": true,
+      "optimization": false
+    }
+  },
+  "defaultConfiguration": "production"
+},
+
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {

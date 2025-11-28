@@ -2,13 +2,15 @@
   "name": "event-hub",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
-    "start": "node server/server.js",
-    "build": "node ./node_modules/@angular/cli/bin/ng build --configuration production",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "serve:ssr:EventHUB": "node dist/event-hub/server/server.mjs"
-  },
+  "ng": "ng",
+  "start": "node server/server.js",
+  "build": "node ./node_modules/@angular/cli/bin/ng build --configuration production",
+  "build:ssr": "ng build --configuration production && ng run EventHUB:server:production",
+  "watch": "ng build --watch --configuration development",
+  "test": "ng test",
+  "serve:ssr": "node dist/eventshub/server/server.mjs",
+  "prerender": "ng run EventHUB:prerender"
+},
   "private": true,
   "dependencies": {
     "@angular/animations": "^18.0.0",

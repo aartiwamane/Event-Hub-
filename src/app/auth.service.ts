@@ -19,9 +19,16 @@ export class AuthService {
 
 
                 
-                loginUser(user : any) {
-                  return this.http.post<any>(this._loginUrl, user)
+                // loginUser(user : any) {
+                //   return this.http.post<any>(this._loginUrl, user)
+                // }
+
+                loginUser(user: any) {
+                return this.http.post<any>('https://event-hub-wdvo.onrender.com/api/login', user, {
+                headers: { 'Content-Type': 'application/json' }
+                });
                 }
+
               
                 logoutUser() {
                   localStorage.removeItem('token')

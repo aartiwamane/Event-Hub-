@@ -13,11 +13,22 @@ export class EventService {
 
   constructor(private http :HttpClient) { }
 
+  // getEvents() {
+  //   return this.http.get<any>(this._eventsUrl)
+  // }
   getEvents() {
-    return this.http.get<any>(this._eventsUrl)
-  }
+  return this.http.get<any>('https://event-hub-wdvo.onrender.com/api/events', {
+    headers: { 'Content-Type': 'application/json' }
+  });
+}
+
+  // getSpecialEvents() {
+  //   return this.http.get<any>(this._specialEventsUrl)
+  // }
 
   getSpecialEvents() {
-    return this.http.get<any>(this._specialEventsUrl)
-  }
+  return this.http.get<any>('https://event-hub-wdvo.onrender.com/api/special', {
+    headers: { 'Content-Type': 'application/json' }
+  });
+}
 }
