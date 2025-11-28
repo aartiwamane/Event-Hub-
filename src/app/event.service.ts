@@ -17,9 +17,10 @@ export class EventService {
   //   return this.http.get<any>(this._eventsUrl)
   // }
   getEvents() {
-  return this.http.get<any>('https://event-hub-wdvo.onrender.com/api/events', {
-    headers: { 'Content-Type': 'application/json' }
-  });
+  return this.http.get<any>(this._eventsUrl, {
+  headers: { 'Content-Type': 'application/json' }
+});
+
 }
 
   // getSpecialEvents() {
@@ -27,8 +28,9 @@ export class EventService {
   // }
 
   getSpecialEvents() {
-  return this.http.get<any>('https://event-hub-wdvo.onrender.com/api/special', {
-    headers: { 'Content-Type': 'application/json' }
-  });
+  return this.http.get<any>(this._specialEventsUrl, {
+  headers: { 'Content-Type': 'application/json' }
+});
+
 }
 }
