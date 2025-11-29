@@ -3,9 +3,9 @@
   "version": "0.0.0",
   "scripts": {
   "ng": "ng",
-  "start": "node server/server.js",
+  "start": "node dist/eventshub/server/main.js",
   "build": "node ./node_modules/@angular/cli/bin/ng build --configuration production",
-  "build:ssr": "ng build --configuration production && ng run EventHUB:server:production",
+  "build:ssr": "ng build && ng run EventHUB:server",
   "watch": "ng build --watch --configuration development",
   "test": "ng test",
   "serve:ssr": "node dist/eventshub/server/server.mjs",
